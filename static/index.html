@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+</head>
+
+<link rel="shortcut icon" href="#">
+<link rel="stylesheet" href="/style.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+
+
+<body>
+    
+<div class='title'><h1>THE MOVIE DB</h1></div>
+<div class ="tab">
+    <button class = "tablinks" onclick="openTab(event,'Home')" id ="defaultOpen">Home&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&xrarr;</button>
+    <button class = "tablinks" onclick="openTab(event,'Search')" >Search&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&xrarr;</button>
+</div>
+
+<!-- main content -->
+<!-- <div class="main"> -->
+    <!-- slide show -->
+<div id ="Home" class ="tabcontent">
+    <div class="title2">Trending Movies</div>
+    <div class="slide_show" id ="MOV">
+        <div id = 'slide0' class="mySlides fade"></div>
+        <div id = 'slide1'class="mySlides fade"></div>
+        <div id = 'slide2'class="mySlides fade"></div>
+        <div id = 'slide3'class="mySlides fade"></div>
+        <div  id = 'slide4'class="mySlides fade"></div>   
+    </div><br>
+
+    <div class="empty"></div>
+    
+    <div class="title2">TV Shows On-Air Today</div>
+    <div class="slide_show" id ="TV">
+        <div id = 'slide5' class="mySlides2 fade"></div>
+        <div id = 'slide6'class="mySlides2 fade"></div>
+        <div id = 'slide7'class="mySlides2 fade"></div>
+        <div id = 'slide8'class="mySlides2 fade"></div>
+        <div  id = 'slide9'class="mySlides2 fade"></div>
+    </div>
+    <div class="empty"></div>
+ 
+    
+</div>
+
+<!-- search  -->
+<div id ="Search" class ="tabcontent">
+    <form onsubmit="SearchData()" id ="form" class ='search' method= "GET">
+    
+        <div class='title3'>Search</div>
+        <div class ='input_div'>
+            <label for="name">KeyWord<span class="required"> *</span></label>
+            <input class ='input'type= "text" id="name">
+            
+        </div><br>
+        <div class ='input_div'>
+            <label for="category">Category<span class="required"> *</span></label>
+            <select class='input_category' id="category">
+                <option></option>
+                <option>Movies</option>
+                <option>TV Shows</option>
+                <option>Movies and TV Shows</option>
+            </select>
+
+        </div>
+        <br>
+        <input type="submit"class='search_button' id ='search' value = "Search">
+        <input type = reset class='clear_button' value ="Clear"><br>
+    </form>
+    <!-- result part  -->
+    <div class='results' id='results'>
+    </div>
+
+</div>
+
+<!-- end tabcontent -->
+<div class='footer'>Designed and developed by Po Yu Yang<br>Powered by TMDB</div>
+<div class ='modal' id = 'modal'>
+    <!-- <div class = 'top'> -->
+    <button class='close-button' id ='close_btn'>&times;</button>
+    <!-- </div> -->
+</div> 
+<div  id = overlay></div>
+
+
+<script src='/main.js'></script>
+<script>      
+    loadData('get_mov','MOV');
+    loadData('get_tv','TV');
+    document.addEventListener("DOMContentLoaded", init, false);
+    document.getElementById("defaultOpen").click();
+    showSlides();
+    showSlides2();
+</script>
+<!-- </div> -->
+<!-- end main -->
+
+
+</body>
+</html>

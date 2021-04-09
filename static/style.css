@@ -1,0 +1,245 @@
+body{
+    background-color: black;
+    font-family: 'Raleway';
+
+}
+
+.title{
+    font-weight: bold;
+    color:rgba(255, 0, 0, 0.625);
+    background: linear-gradient(to right,black 80%,rgba(255, 0, 0, 0.625));
+}
+
+
+
+.tab{
+    float:left;
+    background-color: black;
+    width:20%;
+    overflow:hidden;
+ 
+}
+
+.tab button{
+    display: block;
+    background-color: black;
+    color:white;
+    padding: 15px 15px;
+    font-size: 17px;
+    outline:none;
+    border:none;
+    width:50%;
+    position:relative;
+    left:50%;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.tab button:hover{
+    color:rgba(255, 0, 0, 0.625);
+    border-bottom: 1px solid white;
+}
+
+.tab button.active{
+    color:rgba(255, 0, 0, 0.625);
+    border-bottom: 1px solid white;
+}
+
+.tabcontent{
+    
+    display:none;
+    float:left;
+    border-left:1px solid white;
+    width:70%;
+    min-height: calc(100vh - 150px);
+    max-width: 1400px;
+
+}
+
+
+.title2{
+    /* position:relative; */
+    text-align: center;
+    color:white;
+    font-size: 25px;
+    font-weight: 300;
+    padding:20px;
+}
+
+.title3{
+
+    color:white;
+    font-size: 25px;
+    font-weight:700;
+    position:relative;
+    top:10%;
+
+
+}
+
+.required {
+    color: red;
+    
+  }
+
+.mySlides{
+    display: none;
+    background:black; font-size:23px;
+
+}
+
+.empty{
+    height:80px;
+}
+.mySlides2{
+    display: none;
+    background:black; font-size:23px;
+   
+}
+.slide_show {
+    margin:auto;
+    width:780px;
+    color: white;
+    position: relative;
+    text-align: center;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+
+.search{
+    margin:auto;
+    text-align: center;
+    width: 850px;
+    height:250px;
+    background: linear-gradient(rgba(255, 0, 0, 0.625),black);
+    color:white;
+    position:relative;
+
+}
+
+.input_div{
+    text-align: center;
+    position: relative;
+    top:20%;
+}
+.input{
+    border-radius:5px;
+    width: 300px;
+}
+
+.search_button{
+    background-color: black;
+    color:white;
+    border-radius:5px;
+    position: absolute;
+    top:70%;
+    left:45%;
+    padding:5px 8px;
+    
+    
+}
+
+.search_button:hover{
+    background-color: rgba(255, 0, 0, 0.625);
+}
+
+.clear_button{
+    background-color: black;
+    color:white;
+    border-radius:5px;
+    position: absolute;
+    top:70%;
+    left:55%;
+    padding:5px 14px;
+    
+}
+
+.clear_button:hover{
+    background-color: rgba(255, 0, 0, 0.625);
+}
+
+.results{
+    color:white;
+}
+#overlay{
+    position:fixed;
+    opacity: 0;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    pointer-events: none;
+    background-color: rgba(0,0,0,.6);
+    justify-content: center;
+    align-items:center;
+}
+
+#overlay.active{
+    opacity: 1;
+    pointer-events: all;
+}
+
+
+.modal{
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%) scale(0);
+    width:900px;
+    overflow-y:scroll;
+    height:100vh;
+    z-index: 2;
+
+    background-color: rgb(208, 208, 208);
+    color:black;
+}
+.modal.active{
+    transform: translate(-50%, -50%) scale(1);
+    
+}
+
+.close-button{
+    position:absolute;
+    top:-10px;
+    right:-10px;
+    cursor: pointer;
+    border:none;
+    outline:none;
+    background:none;
+    font-size: 25px;
+    width:50px;
+    height:50px;
+    font-weight: bold;
+}
+
+.footer{
+    clear:both;
+    color:rgb(125, 113, 113);
+    background-color:  rgba(130, 12, 12, 0.625);
+    height:60px;
+    width:80%;
+    text-align: right;
+    line-height: 30px;
+    font-size:10px;
+    font-style: italic;
+    position:relative;
+    left:20%;
+    border-left:1px white solid;
+
+}
